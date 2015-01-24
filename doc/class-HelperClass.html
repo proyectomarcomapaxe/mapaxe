@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class HelperClass | mapaxe</title>
+
+	<script type="text/javascript" src="resources/combined.js?121841475"></script>
+	<script type="text/javascript" src="elementlist.js?1019869838"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-mapaxe.html">mapaxe<span></span></a>
+						<ul>
+				<li class="active"><a href="package-mapaxe.libs.html">libs</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-HelperClass.html">HelperClass</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-extime.html">extime</a></li>
+				<li><a href="function-require_once_all.html">require_once_all</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-mapaxe.libs.html" title="Summary of mapaxe\libs"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class HelperClass</h1>
+
+
+	<div class="description">
+	
+<p>Helper.php is a collection of functions we all use on our PHP projects.
+Wrapper class for PHP helper functions</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-mapaxe.html">mapaxe</a>\<a href="package-mapaxe.libs.html">libs</a><br />
+
+				<b>License:</b>
+				<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.</a><br />
+				<b>Author:</b>
+				Marco Mapaxe<br />
+		<b>Located at</b> <a href="source-class-HelperClass.html#5-107" title="Go to source code">libs/Helper.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="loadFiles" id="_loadFiles">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadFiles">#</a>
+		<code><a href="source-class-HelperClass.html#13-60" title="Go to source code">loadFiles</a>( <span>string <var>$absolutePath</var></span>, <span>string <var>$extension</var> = <span class="php-quote">'php'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Function to load files from a parent directory, it can used to load libs from
+a concrete path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Function to load files from a parent directory, it can used to load libs from
+a concrete path</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$absolutePath</var></dt>
+					<dd><code>string</code><br>$absolutePath the absolute path to the parent directory, it's used to be
+dirname(__FILLE__) or something similar</dd>
+					<dt><var>$extension</var></dt>
+					<dd><code>string</code><br>$extension the extension of the files to read in this folder and its subfolders</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>all the files in folders or subfolders from this parent directory<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executionTime" id="_executionTime">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executionTime">#</a>
+		<code><a href="source-class-HelperClass.html#62-105" title="Go to source code">executionTime</a>( <span>string <var>$function</var></span>, <span>mixed <var>$context</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$outputFormat</var> = <span class="php-quote">'s'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Function to show the execution time of a function, a static method of a class
+or a method form an object. These functions or methods can't get any parameter,
+otherwise this helper will fail.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Function to show the execution time of a function, a static method of a class
+or a method form an object. These functions or methods can't get any parameter,
+otherwise this helper will fail.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function</var></dt>
+					<dd><code>string</code><br>$function the name of the function or method to call</dd>
+					<dt><var>$context</var></dt>
+					<dd><code>mixed</code><br>$context the object or name of the class where the method or static method is
+called respectively</dd>
+					<dt><var>$outputFormat</var></dt>
+					<dd><code>string</code><br>$outputFormat 's' to show the execution time as seconds or 'm' to show the
+execution time as minutes</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>all the files in folders or subfolders from this parent directory<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		mapaxe API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
