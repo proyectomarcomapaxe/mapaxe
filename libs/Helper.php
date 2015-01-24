@@ -4,7 +4,7 @@
 
     /**
      * Helper.php is a collection of functions we all use on our PHP projects
-     * @package	mapaxe
+     * @package	mapaxe.libs
      * @license	GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.
        @author  Marco Mapaxe
      */
@@ -37,7 +37,7 @@
                               while ( ( $file = readdir($dh) ) !== FALSE) {
                                     if( $file!='.' && $file!='..' ){
                                              if ( is_dir($absolutePath . DIRECTORY_SEPARATOR .$file) ){
-                                                    self::loadLibs($absolutePath.$file);
+                                                    self::loadFiles($absolutePath.$file);
                                              }
                                              else{
                                                     $file=explode('.',$file);
@@ -104,41 +104,4 @@
                     return (float)(($timeend-$timestart)/$divider);
             }
     }
-    echo '<pre>
-    /*
-     Examples of usage:
-
-    */
-
-    </pre>';
-
-    try{
-            //Loading files
-            echo '<p style="color:brown">Files founded and loaded if needed:<p><pre>'.print_r( HelperClass::loadFiles( dirname(__FILE__) ),1 ).'</pre></p></p>';
-
-            //Getting execution time
-            $context=new MyClass();
-            $function="doNothing";
-            $format='seconds';
-
-            $clasName=get_class($context);
-            echo "<p style='color:teal'>$clasName::$function executed along ".HelperClass::executionTime($function,$context,$format[0])." $format</p>";
-    }
-    catch(Exception $e){
-            echo '<p>EXCEPTION</p>'.var_dump($e);
-    }
-
-
-    exit(0);
-
-    /*
-      End of Helper.php file
-
-    */
-
-    class MyClass{
-            function doNothing(){
-                    usleep(1000);
-                    echo '<p>Doing nothing... to get my execution time:</p>';
-            }
-    }
+    
