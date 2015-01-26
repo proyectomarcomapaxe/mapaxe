@@ -4,14 +4,40 @@ if( !defined('ENTRYPOINT') )	die('Restricted Access');
 
 use \mapaxe\libs\Log;
 use \mapaxe\core\Marco;
-
+/** 
+ * Handler.php is the core object to manage the error and exceptions throws by the program;
+ * entry.php is the entry point to get easy and offer function tools for the core functionality
+ * @package mapaxe.core
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.
+ * @author Marco Mapaxe
+ */
 class Handler{
     
+    /**
+     * Constant necesary to control the type of message what log
+     */
     const ERROR='error';
+    /**
+     * Constant necesary to control the type of message what log
+     */
     const EXCEPTION='exception';
+    /**
+     * Constant necesary to control the type of message what log
+     */
     const WARNING='warn';
+    /**
+     * Constant necesary to control the type of message what log
+     */
     const INFO='info';
-        
+    
+    /**
+     * 
+     * @param string $typeMsg it will be one of the control constant  of this class, to know what king of error we are dealing with
+     * @param string $message the content of the  error/exception
+     * @param string $rawdata the raw content of the error/exception
+     * @return string the the complete message logged
+     * @throws \InvalidArgumentException if bad paremeters were passed (string in $typeMsg, string in $message, string in $rawdata)
+     */
     static function log( $typeMsg, $message , $rawdata= '' ){
         if( !is_string($typeMsg) || !is_string($message) || !is_string($rawdata) )
             throw new \InvalidArgumentException( "Handler::log EXCEPTION, bad parameter on core handler" );
@@ -26,11 +52,27 @@ class Handler{
 
         return $message.$info;
     }
-    
+    /**
+     * Ideal manager for the set_exception_handler function although it can be called from external
+     * 
+     * @param \Exception $e the original exception info
+     * @return void
+     */
     static function exception_handler(\Exception $e){
         $context=array( $e->getPrevious(), $e->getTraceAsString() );
         self::error_handler( $e->getCode(),$e->getMessage(),$e->getFile(),$e->getLine(), $context );
     }
+    /**
+     * Ideal manager for the set_error_handler function although it can be called from external
+     * 
+     * @param string $errno error code
+     * @param string $errstr error message
+     * @param string $errfile absolute filename where error became
+     * @param string $errline number of line in the file where script stopped
+     * @param array $errcontext it can be info about the trace or the previous error
+     * @return boolean for a complete or not bypass of PHP engine errors
+     * 
+     */
     static function error_handler($errno ,$errstr , $errfile , $errline , array $errcontext ){
         $code=$errno;
         $typeMsg=self::ERROR;
