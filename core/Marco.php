@@ -1,7 +1,7 @@
 <?php
 namespace mapaxe\core;
 if( !defined('ENTRYPOINT') )	die('Restricted Access');
-/**
+/** 
  * entry.php is the entry point to get easy and offer function tools for the core functionality;
  * Marco.php is the core object for this program
  * @package mapaxe.core
