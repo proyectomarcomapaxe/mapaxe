@@ -1,8 +1,11 @@
 <?php
+//declaration of package
 namespace mapaxe\libs;
+if( !defined('ENTRYPOINT') )	die('Restricted Access');
+
 /**
- * entry.php To make proxy functionality regarding in the libraries folder and and offer other function tools for the core functionality;
- * Helper.php is a collection of functions we all use on our PHP projects. Wrapper class for PHP helper functions
+ * Helper.php is a collection of functions we all use on our PHP projects. Wrapper class for PHP helper functions;
+ * entry.php To make proxy functionality regarding in the libraries folder and and offer other function tools for the core functionality
  * @package mapaxe.libs
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.
  * @author Marco Mapaxe
@@ -17,14 +20,14 @@ class Helper {
      * @param string $extension the extension of the files to read in this folder and its subfolders
      * @param array $files it's the variables where are stored all the file names, this variable is local because it is a function but it is an object method it would be a reference to keep modified from external calls
      * @return array all the files in folders or subfolders from this parent directory in the form of: array([absolutePath]=>[filename with extension]);
-     * @throws RuntimeException if the absolutePath isn't a directory to read its contents (files and or directories inside)
-     * @throws InvalidArgumentException if any argument is not of type expected ( string for $absolutePath, string for $extension or array for $files )
+     * @throws \InvalidArgumentException if any argument is not of type expected ( string for $absolutePath, string for $extension or array for $files )
+     * @throws \RuntimeException if the absolutePath isn't a directory to read its contents (files and or directories inside)
      *
      */
     static function get_files($absolutePath, $extension = 'php', $files=[]) {
         //validate params
         if ( !is_string($absolutePath) || !is_string($extension) || !is_array($files) )
-            throw new \InvalidArgumentException('Helper::loadFiles EXCEPTION, bad parameter');
+            throw new \InvalidArgumentException('Helper::get_files EXCEPTION, bad parameter');
 
         //file names storing
         if (is_dir($absolutePath)) {
@@ -63,21 +66,21 @@ class Helper {
      * @param string $function the name of the function or method to call
      * @param mixed  $context the object or name of the class where the method or static method is called respectively
      * @param string $outputFormat 's' to show the execution time as seconds or 'm' to show the execution time as minutes
-     * @return array all the files in folders or subfolders from this parent directory
-     * @throws BadFunctionCallException it couldn't be called the callable arguments function and context
-     * @throws InvalidArgumentException if any argument is not of type expected
+     * @return float the time execution as a float
+     * @throws \InvalidArgumentException if any argument is not of type expected
+     * @throws \BadFunctionCallException it couldn't be called the callable arguments function and context
      *
      */
     static function execution_time($function, $context = NULL, $outputFormat = 's') {
 
         //validate params
         if (!is_string($function))
-            throw new \InvalidArgumentException('Helper::executionTime EXCEPTION, bad \$function parameter with value: '.$function);
+            throw new \InvalidArgumentException('Helper::execution_time EXCEPTION, bad \$function parameter with value: '.$function);
         if ($context != NULL && !is_object($context) && !is_string($context))
-            throw new \InvalidArgumentException('Helper::executionTime EXCEPTION, bad \$context parameter with value: '.$context);
+            throw new \InvalidArgumentException('Helper::execution_time EXCEPTION, bad \$context parameter with value: '.$context);
         $outputFormat = strtolower($outputFormat);
         if ($outputFormat != 's' && $outputFormat != 'm')
-            throw new \InvalidArgumentException('Helper::executionTime EXCEPTION, bad \$outputFormat parameter with value: '.$outputFormat);
+            throw new \InvalidArgumentException('Helper::execution_time EXCEPTION, bad \$outputFormat parameter with value: '.$outputFormat);
 
         //fixing and checking params
         if ($context)
@@ -87,7 +90,7 @@ class Helper {
 
         if (!is_callable($callable)) {
             $className = ( is_string($context) ? $context : get_class($context) );
-            throw new \BadFunctionCallException("Helper::executionTime EXCEPTION in $className::$function calling");
+            throw new \BadFunctionCallException("Helper::execution_time EXCEPTION in $className::$function calling");
         }
 
         //processing and getting time
@@ -102,5 +105,5 @@ class Helper {
 
         return (float) (($timeend - $timestart) / $divider);
     }
-
+    
 }
