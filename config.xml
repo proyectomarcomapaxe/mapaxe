@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marco  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+            xmlns='http://xml.netbeans.org/schema/config'
+            xsi:schemaLocation='http://xml.netbeans.org/schema/config schema.xsd'>
+    <debug>true</debug>
+    <cache>
+        <tiempo>
+            600<!-- in seconds -->
+        </tiempo>
+    </cache>
+    <session>
+        <tiempo>
+            600<!-- in seconds -->
+        </tiempo>
+    </session>
+    <configs>
+        <log>
+            <directory>logs</directory>
+            <timezone>Europe/Madrid</timezone>
+        </log>
+    </configs>
+</marco>
