@@ -1,3 +1,5 @@
+It package tries to be a light framework to host web or mobile projects for php technology
+and moreover it will try to be ligh framework for bedding companies
 # libs/Helper.php
 General helper static functions we all use on our PHP projects
 # libs/entry.php
