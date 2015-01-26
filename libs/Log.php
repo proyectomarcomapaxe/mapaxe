@@ -78,7 +78,7 @@ class Log{
      *  Modifies current log and adds the message to the log.
      *
      * @param string $log the filename with path, subpathh and basename
-     * @param \DateTime $date the date to name and write the log file
+     * @param object $date datetime object to name and write the log file
      * @param string $message the content of the log file
      * @return void
      * @throws \InvalidArgumentException if bad parameters passed (string in $log, \DateTime in $date or string in $message)
@@ -86,7 +86,7 @@ class Log{
      */
     
     private function edit($log,$date,$message) {
-        if( !is_string($log) || !$date instanceof DateTime || !is_string($message) )
+        if( !is_string($log) || !is_object($date) || !is_string($message) )
             throw new \InvalidArgumentException( "Log::edit EXCEPTION, bad parameters passed on class type: ".get_class($this) );	
         try{
             $logcontent = "Time : " . $date->format('H:i:s')."\r\n" . $message ."\r\n\r\n";
