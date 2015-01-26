@@ -7,7 +7,7 @@
 	<title>Class mapaxe\libs\Helper | mapaxe</title>
 
 	<script type="text/javascript" src="resources/combined.js?121841475"></script>
-	<script type="text/javascript" src="elementlist.js?749651802"></script>
+	<script type="text/javascript" src="elementlist.js?2461519458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -40,6 +40,8 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-mapaxe.libs.Helper.html">Helper</a></li>
+				<li><a href="class-mapaxe.libs.Log.html">Log</a></li>
+				<li><a href="class-mapaxe.libs.Xml.html">Xml</a></li>
 			</ul>
 
 
@@ -93,7 +95,7 @@
 	<div class="description">
 	
 <p>entry.php To make proxy functionality regarding in the libraries folder and
-and offer other function tools for the core functionality Helper.php is a
+and offer other function tools for the core functionality; Helper.php is a
 collection of functions we all use on our PHP projects. Wrapper class for PHP
 helper functions</p>
 
@@ -117,7 +119,7 @@ helper functions</p>
 				<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.</a><br />
 				<b>Author:</b>
 				Marco Mapaxe<br />
-		<b>Located at</b> <a href="source-class-mapaxe.libs.Helper.html#3-106" title="Go to source code">libs/Helper.php</a><br />
+		<b>Located at</b> <a href="source-class-mapaxe.libs.Helper.html#6-109" title="Go to source code">libs/Helper.php</a><br />
 	</div>
 
 
@@ -135,7 +137,7 @@ helper functions</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_files">#</a>
-		<code><a href="source-class-mapaxe.libs.Helper.html#12-57" title="Go to source code">get_files</a>( <span>string <var>$absolutePath</var></span>, <span>string <var>$extension</var> = <span class="php-quote">'php'</span></span>, <span>array <var>$files</var> = []</span> )</code>
+		<code><a href="source-class-mapaxe.libs.Helper.html#15-60" title="Go to source code">get_files</a>( <span>string <var>$absolutePath</var></span>, <span>string <var>$extension</var> = <span class="php-quote">'php'</span></span>, <span>array <var>$files</var> = []</span> )</code>
 
 		<div class="description short">
 			
@@ -174,10 +176,10 @@ of: array([absolutePath]=&gt;[filename with extension]);<br />
 
 				<h4>Throws</h4>
 				<div class="list">
-					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>if the absolutePath isn't a directory to read its contents (files and or
-directories inside)<br />
 					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if any argument is not of type expected ( string for $absolutePath, string for
 $extension or array for $files )<br />
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>if the absolutePath isn't a directory to read its contents (files and or
+directories inside)<br />
 				</div>
 
 
@@ -189,14 +191,14 @@ $extension or array for $files )<br />
 
 		<td class="attributes"><code>
 			 public static
-			array
+			float
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_execution_time">#</a>
-		<code><a href="source-class-mapaxe.libs.Helper.html#59-104" title="Go to source code">execution_time</a>( <span>string <var>$function</var></span>, <span>mixed <var>$context</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$outputFormat</var> = <span class="php-quote">'s'</span></span> )</code>
+		<code><a href="source-class-mapaxe.libs.Helper.html#62-107" title="Go to source code">execution_time</a>( <span>string <var>$function</var></span>, <span>mixed <var>$context</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$outputFormat</var> = <span class="php-quote">'s'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -228,13 +230,13 @@ execution time as minutes</dd>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>array</code><br>all the files in folders or subfolders from this parent directory<br />
+					<code>float</code><br>the time execution as a float<br />
 				</div>
 
 				<h4>Throws</h4>
 				<div class="list">
-					<code><code><a href="class-BadFunctionCallException.html">BadFunctionCallException</a></code></code><br>it couldn't be called the callable arguments function and context<br />
 					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if any argument is not of type expected<br />
+					<code><code><a href="class-BadFunctionCallException.html">BadFunctionCallException</a></code></code><br>it couldn't be called the callable arguments function and context<br />
 				</div>
 
 

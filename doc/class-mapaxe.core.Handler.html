@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class mapaxe\core\Handler | mapaxe</title>
+
+	<script type="text/javascript" src="resources/combined.js?121841475"></script>
+	<script type="text/javascript" src="elementlist.js?2461519458"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-mapaxe.html">mapaxe<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-mapaxe.core.html">core</a>
+						</li>
+				<li><a href="namespace-mapaxe.libs.html">libs</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-mapaxe.core.Config.html">Config</a></li>
+				<li class="active"><a href="class-mapaxe.core.Handler.html">Handler</a></li>
+				<li><a href="class-mapaxe.core.Marco.html">Marco</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-mapaxe.core.html" title="Summary of mapaxe\core"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Handler</h1>
+
+
+	<div class="description">
+	
+<p>entry.php is the entry point to get easy and offer function tools for the
+core functionality; Handler.php is the core object to manage the error and
+exceptions throws by the program</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-mapaxe.html">mapaxe</a>\<a href="namespace-mapaxe.core.html">core</a><br />
+		<b>Package:</b> mapaxe\core<br />
+
+				<b>License:</b>
+				<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.</a><br />
+				<b>Author:</b>
+				Marco Mapaxe<br />
+		<b>Located at</b> <a href="source-class-mapaxe.core.Handler.html#7-108" title="Go to source code">core/Handler.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="log" id="_log">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_log">#</a>
+		<code><a href="source-class-mapaxe.core.Handler.html#33-54" title="Go to source code">log</a>( <span>string <var>$typeMsg</var></span>, <span>string <var>$message</var></span>, <span>string <var>$rawdata</var> = <span class="php-quote">''</span> </span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$typeMsg</var></dt>
+					<dd><code>string</code><br>$typeMsg it will be one of the control constant of this class, to know what king
+of error we are dealing with</dd>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code><br>$message the content of the error/exception</dd>
+					<dt><var>$rawdata</var></dt>
+					<dd><code>string</code><br>$rawdata the raw content of the error/exception</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the the complete message logged<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if bad paremeters were passed (string in $typeMsg, string in $message, string in
+$rawdata)<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exception_handler" id="_exception_handler">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exception_handler">#</a>
+		<code><a href="source-class-mapaxe.core.Handler.html#55-64" title="Go to source code">exception_handler</a>( <span><code><a href="class-Exception.html">Exception</a></code> <var>$e</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Ideal manager for the set_exception_handler function although it can be
+called from external</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Ideal manager for the set_exception_handler function although it can be
+called from external</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$e</var></dt>
+					<dd><code><code><a href="class-Exception.html">Exception</a></code></code><br>$e the original exception info</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="error_handler" id="_error_handler">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_error_handler">#</a>
+		<code><a href="source-class-mapaxe.core.Handler.html#65-106" title="Go to source code">error_handler</a>( <span>string <var>$errno</var></span>, <span>string <var>$errstr</var></span>, <span>string <var>$errfile</var></span>, <span>string <var>$errline</var></span>, <span>array <var>$errcontext</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Ideal manager for the set_error_handler function although it can be called
+from external</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Ideal manager for the set_error_handler function although it can be called
+from external</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$errno</var></dt>
+					<dd><code>string</code><br>$errno error code</dd>
+					<dt><var>$errstr</var></dt>
+					<dd><code>string</code><br>$errstr error message</dd>
+					<dt><var>$errfile</var></dt>
+					<dd><code>string</code><br>$errfile absolute filename where error became</dd>
+					<dt><var>$errline</var></dt>
+					<dd><code>string</code><br>$errline number of line in the file where script stopped</dd>
+					<dt><var>$errcontext</var></dt>
+					<dd><code>array</code><br>$errcontext it can be info about the trace or the previous error</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>for a complete or not bypass of PHP engine errors<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ERROR" id="ERROR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-mapaxe.core.Handler.html#16-19" title="Go to source code"><b>ERROR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'error'</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="EXCEPTION" id="EXCEPTION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-mapaxe.core.Handler.html#20-23" title="Go to source code"><b>EXCEPTION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'exception'</span></code></td>
+		<td class="description"><div>
+			<a href="#EXCEPTION" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="WARNING" id="WARNING">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-mapaxe.core.Handler.html#24-27" title="Go to source code"><b>WARNING</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'warn'</span></code></td>
+		<td class="description"><div>
+			<a href="#WARNING" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="INFO" id="INFO">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-mapaxe.core.Handler.html#28-31" title="Go to source code"><b>INFO</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'info'</span></code></td>
+		<td class="description"><div>
+			<a href="#INFO" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constant necesary to control the type of message what log</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		mapaxe API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

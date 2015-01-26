@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class mapaxe\libs\Xml | mapaxe</title>
+
+	<script type="text/javascript" src="resources/combined.js?121841475"></script>
+	<script type="text/javascript" src="elementlist.js?2461519458"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-mapaxe.html">mapaxe<span></span></a>
+						<ul>
+				<li><a href="namespace-mapaxe.core.html">core</a>
+						</li>
+				<li class="active"><a href="namespace-mapaxe.libs.html">libs</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-mapaxe.libs.Helper.html">Helper</a></li>
+				<li><a href="class-mapaxe.libs.Log.html">Log</a></li>
+				<li class="active"><a href="class-mapaxe.libs.Xml.html">Xml</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-mapaxe.libs.extime.html">extime</a></li>
+				<li><a href="function-mapaxe.libs.require_once_all.html">require_once_all</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-mapaxe.libs.html" title="Summary of mapaxe\libs"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Xml</h1>
+
+
+	<div class="description">
+	
+<p>entry.php To make proxy functionality regarding in the libraries folder and
+and offer other function tools for the core functionality; Xml.php is a class to
+read and xml file or offer its utilities</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-mapaxe.core.Config.html">mapaxe\core\Config</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-mapaxe.html">mapaxe</a>\<a href="namespace-mapaxe.libs.html">libs</a><br />
+		<b>Package:</b> mapaxe\libs<br />
+
+				<b>License:</b>
+				<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.</a><br />
+				<b>Author:</b>
+				Marco Mapaxe<br />
+		<b>Located at</b> <a href="source-class-mapaxe.libs.Xml.html#5-57" title="Go to source code">libs/Xml.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-mapaxe.libs.Xml.html#18-26" title="Go to source code">__construct</a>( <span>mixed <var>$xmlFileName</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attach" id="_attach">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attach">#</a>
+		<code><a href="source-class-mapaxe.libs.Xml.html#28-39" title="Go to source code">attach</a>( <span>object <var>$xmlArray</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$xmlArray</var></dt>
+					<dd><code>object</code><br>$xmlArray a php object representing the loading from xml<sub>2</sub>_array
+static method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>indica si el xml cargado desde la ruta es valido con el schema cargado por
+defecto (./schema.xsd)<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if $xmlArray is not an object<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="xml_2_array" id="_xml_2_array">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_xml_2_array">#</a>
+		<code><a href="source-class-mapaxe.libs.Xml.html#41-55" title="Go to source code">xml_2_array</a>( <span><code><a href="class-DOMNode.html">DOMNode</a></code> <var>$dom</var></span> )</code>
+
+		<div class="description short">
+			
+<p>It is a tool relationed with xml functionality, general tools or not rated
+ones are in Helper class</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>It is a tool relationed with xml functionality, general tools or not rated
+ones are in Helper class</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dom</var></dt>
+					<dd><code><code><a href="class-DOMNode.html">DOMNode</a></code></code><br>$dom the dom node representation of a xml object previously loaded</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>the asociative array representation of the xml dom node<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if $dom is not a instance of \DomNode<br />
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>if it wasn't possible to read the dom object from simple xml library due to not
+validation success or any I/O reading error<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="fileName" id="$fileName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-mapaxe.libs.Xml.html#13-17" title="Go to source code"><var>$fileName</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$fileName" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>$fileName the name of the xml file to read/load</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>$fileName the name of the xml file to read/load</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		mapaxe API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

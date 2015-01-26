@@ -7,7 +7,7 @@
 	<title>Class mapaxe\core\Marco | mapaxe</title>
 
 	<script type="text/javascript" src="resources/combined.js?121841475"></script>
-	<script type="text/javascript" src="elementlist.js?749651802"></script>
+	<script type="text/javascript" src="elementlist.js?2461519458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -39,6 +39,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-mapaxe.core.Config.html">Config</a></li>
+				<li><a href="class-mapaxe.core.Handler.html">Handler</a></li>
 				<li class="active"><a href="class-mapaxe.core.Marco.html">Marco</a></li>
 			</ul>
 
@@ -88,7 +90,7 @@
 	<div class="description">
 	
 <p>entry.php is the entry point to get easy and offer function tools for the
-core functionality Marco.php is the core object for this program</p>
+core functionality; Marco.php is the core object for this program</p>
 
 	</div>
 
@@ -124,7 +126,7 @@ core functionality Marco.php is the core object for this program</p>
 				<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.</a><br />
 				<b>Author:</b>
 				Marco Mapaxe<br />
-		<b>Located at</b> <a href="source-class-mapaxe.core.Marco.html#4-74" title="Go to source code">core/Marco.php</a><br />
+		<b>Located at</b> <a href="source-class-mapaxe.core.Marco.html#4-99" title="Go to source code">core/Marco.php</a><br />
 	</div>
 
 
@@ -142,7 +144,7 @@ core functionality Marco.php is the core object for this program</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-mapaxe.core.Marco.html#23-25" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-mapaxe.core.Marco.html#24-32" title="Go to source code">__construct</a>( <span>mixed <var>$config</var> = <span class="php-keyword1">NULL</span></span> )</code>
 
 		<div class="description short">
 			
@@ -171,7 +173,7 @@ core functionality Marco.php is the core object for this program</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___destruct">#</a>
-		<code><a href="source-class-mapaxe.core.Marco.html#26-29" title="Go to source code">__destruct</a>( )</code>
+		<code><a href="source-class-mapaxe.core.Marco.html#33-36" title="Go to source code">__destruct</a>( )</code>
 
 		<div class="description short">
 			
@@ -189,7 +191,36 @@ core functionality Marco.php is the core object for this program</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getInstance" id="_getInstance">
+	<tr data-order="batch" id="_batch">
+
+		<td class="attributes"><code>
+			 protected static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_batch">#</a>
+		<code><a href="source-class-mapaxe.core.Marco.html#37-54" title="Go to source code">batch</a>( <span>mixed <var>$config</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_instance" id="_get_instance">
 
 		<td class="attributes"><code>
 			 public static
@@ -199,8 +230,8 @@ core functionality Marco.php is the core object for this program</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getInstance">#</a>
-		<code><a href="source-class-mapaxe.core.Marco.html#30-50" title="Go to source code">getInstance</a>( <span>mixed <var>$params</var> = <span class="php-quote">''</span></span>, <span>string <var>$className</var> = <span class="php-quote">''</span></span> )</code>
+		<a class="anchor" href="#_get_instance">#</a>
+		<code><a href="source-class-mapaxe.core.Marco.html#55-75" title="Go to source code">get_instance</a>( <span>mixed <var>$params</var> = <span class="php-quote">''</span></span>, <span>string <var>$className</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -220,7 +251,8 @@ core functionality Marco.php is the core object for this program</p>
 					<dd><code>mixed</code><br>$params the arguments to pass to the instance, it can be an array to pass
 several ones</dd>
 					<dt><var>$className</var></dt>
-					<dd><code>string</code><br>$className the class of the objecto to instantiate</dd>
+					<dd><code>string</code><br>$className the class of the objecto to instantiate, clasName will be the
+original class from the call</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -249,7 +281,7 @@ several ones</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___get">#</a>
-		<code><a href="source-class-mapaxe.core.Marco.html#51-62" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-mapaxe.core.Marco.html#76-87" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -295,7 +327,7 @@ several ones</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___set">#</a>
-		<code><a href="source-class-mapaxe.core.Marco.html#63-72" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-mapaxe.core.Marco.html#88-97" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -346,11 +378,40 @@ several ones</dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-mapaxe.core.Marco.html#16" title="Go to source code"><var>$singleton</var></a>
+				<a href="source-class-mapaxe.core.Marco.html#12-16" title="Go to source code"><var>$singleton</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
 			<a href="#$singleton" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>StdClass</h4>
+					<div class="list">
+							An object containing all the singleton instances for all the Marco objects in
+the program, accesible from any file and object or function called because it is
+static like a global<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="config" id="$config">
+		<td class="attributes"><code>
+			public static 
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-mapaxe.core.Marco.html#17" title="Go to source code"><var>$config</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$config" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -369,7 +430,7 @@ several ones</dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-mapaxe.core.Marco.html#21" title="Go to source code"><var>$gets</var></a>
+				<a href="source-class-mapaxe.core.Marco.html#18-22" title="Go to source code"><var>$gets</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -382,6 +443,10 @@ several ones</dd>
 			<div class="description detailed hidden">
 				
 
+					<h4>StdClass</h4>
+					<div class="list">
+							An object containing all the variable stored in this Marco object<br />
+					</div>
 			</div>
 		</div></td>
 	</tr>

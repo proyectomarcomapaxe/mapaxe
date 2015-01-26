@@ -7,7 +7,7 @@
 	<title>Function mapaxe\libs\require_once_all | mapaxe</title>
 
 	<script type="text/javascript" src="resources/combined.js?121841475"></script>
-	<script type="text/javascript" src="elementlist.js?749651802"></script>
+	<script type="text/javascript" src="elementlist.js?2461519458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -40,6 +40,8 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-mapaxe.libs.Helper.html">Helper</a></li>
+				<li><a href="class-mapaxe.libs.Log.html">Log</a></li>
+				<li><a href="class-mapaxe.libs.Xml.html">Xml</a></li>
 			</ul>
 
 
@@ -99,7 +101,7 @@
 	<div class="info">
 		<b>Namespace:</b> <a href="namespace-mapaxe.html">mapaxe</a>\<a href="namespace-mapaxe.libs.html">libs</a><br />
 		
-		<b>Located at</b> <a href="source-function-mapaxe.libs.require_once_all.html#9-26" title="Go to source code">libs/entry.php</a><br />
+		<b>Located at</b> <a href="source-function-mapaxe.libs.require_once_all.html#12-29" title="Go to source code">libs/entry.php</a><br />
 	</div>
 
 
@@ -110,8 +112,8 @@
 		<td class="value"><code><var>$absolutePath</var> = <span class="php-keyword1">NULL</span></code></td>
 		<td>
 			 the absolute path to the parent directory, it's used to be dirname(__FILLE__)
-or something similar. Its default value is the absolute path of alias.php, it is
-said dirname(__FILE__)
+or something similar. Its default value is the absolute path for entry.php, it
+is said dirname(__FILE__)
 		</td>
 	</tr>
 	<tr id="$extension">
@@ -147,19 +149,19 @@ of: array([absolutePath]=&gt;[filename with extension]);
 	<caption>Thrown exceptions summary</caption>
 	<tr>
 		<td class="name"><code>
+			<code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code>
+		</code></td>
+		<td>
+			if any argument is not of type expected
+		</td>
+	</tr>
+	<tr>
+		<td class="name"><code>
 			<code><a href="class-RuntimeException.html">RuntimeException</a></code>
 		</code></td>
 		<td>
 			if the absolutePath isn't a directory to read its contents (files and or
 directories inside)
-		</td>
-	</tr>
-	<tr>
-		<td class="name"><code>
-			<code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code>
-		</code></td>
-		<td>
-			if any argument is not of type expected
 		</td>
 	</tr>
 	</table>
