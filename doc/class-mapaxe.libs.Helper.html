@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class HelperClass | mapaxe</title>
+	<title>Class mapaxe\libs\Helper | mapaxe</title>
 
 	<script type="text/javascript" src="resources/combined.js?121841475"></script>
-	<script type="text/javascript" src="elementlist.js?1019869838"></script>
+	<script type="text/javascript" src="elementlist.js?749651802"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -19,13 +19,17 @@
 
 
 		<div id="groups">
-			<h3>Packages</h3>
+			<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="package-mapaxe.html">mapaxe<span></span></a>
+				<li class="active"><a href="namespace-mapaxe.html">mapaxe<span></span></a>
 						<ul>
-				<li class="active"><a href="package-mapaxe.libs.html">libs</a>
+				<li><a href="namespace-mapaxe.core.html">core</a>
+						</li>
+				<li class="active"><a href="namespace-mapaxe.libs.html">libs</a>
 						</li>
 							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
 			</ul>
 		</div>
 
@@ -35,7 +39,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-HelperClass.html">HelperClass</a></li>
+				<li class="active"><a href="class-mapaxe.libs.Helper.html">Helper</a></li>
 			</ul>
 
 
@@ -44,8 +48,8 @@
 
 			<h3>Functions</h3>
 			<ul>
-				<li><a href="function-extime.html">extime</a></li>
-				<li><a href="function-require_once_all.html">require_once_all</a></li>
+				<li><a href="function-mapaxe.libs.extime.html">extime</a></li>
+				<li><a href="function-mapaxe.libs.require_once_all.html">require_once_all</a></li>
 			</ul>
 		</div>
 	</div>
@@ -68,7 +72,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-mapaxe.libs.html" title="Summary of mapaxe\libs"><span>Package</span></a>
+				<a href="namespace-mapaxe.libs.html" title="Summary of mapaxe\libs"><span>Namespace</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -83,13 +87,15 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class HelperClass</h1>
+	<h1>Class Helper</h1>
 
 
 	<div class="description">
 	
-<p>Helper.php is a collection of functions we all use on our PHP projects.
-Wrapper class for PHP helper functions</p>
+<p>entry.php To make proxy functionality regarding in the libraries folder and
+and offer other function tools for the core functionality Helper.php is a
+collection of functions we all use on our PHP projects. Wrapper class for PHP
+helper functions</p>
 
 	</div>
 
@@ -104,21 +110,21 @@ Wrapper class for PHP helper functions</p>
 	<div class="info">
 		
 		
-		
-		<b>Package:</b> <a href="package-mapaxe.html">mapaxe</a>\<a href="package-mapaxe.libs.html">libs</a><br />
+		<b>Namespace:</b> <a href="namespace-mapaxe.html">mapaxe</a>\<a href="namespace-mapaxe.libs.html">libs</a><br />
+		<b>Package:</b> mapaxe\libs<br />
 
 				<b>License:</b>
 				<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later; see LICENSE.txt. Moreover it intends to be a collaborative class multiple developers among several PHP developers.</a><br />
 				<b>Author:</b>
 				Marco Mapaxe<br />
-		<b>Located at</b> <a href="source-class-HelperClass.html#5-107" title="Go to source code">libs/Helper.php</a><br />
+		<b>Located at</b> <a href="source-class-mapaxe.libs.Helper.html#3-106" title="Go to source code">libs/Helper.php</a><br />
 	</div>
 
 
 
 	<table class="summary" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="loadFiles" id="_loadFiles">
+	<tr data-order="get_files" id="_get_files">
 
 		<td class="attributes"><code>
 			 public static
@@ -128,20 +134,22 @@ Wrapper class for PHP helper functions</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_loadFiles">#</a>
-		<code><a href="source-class-HelperClass.html#13-60" title="Go to source code">loadFiles</a>( <span>string <var>$absolutePath</var></span>, <span>string <var>$extension</var> = <span class="php-quote">'php'</span></span> )</code>
+		<a class="anchor" href="#_get_files">#</a>
+		<code><a href="source-class-mapaxe.libs.Helper.html#12-57" title="Go to source code">get_files</a>( <span>string <var>$absolutePath</var></span>, <span>string <var>$extension</var> = <span class="php-quote">'php'</span></span>, <span>array <var>$files</var> = []</span> )</code>
 
 		<div class="description short">
 			
-<p>Function to load files from a parent directory, it can used to load libs from
-a concrete path</p>
+<p>Function to get file names from a parent directory, it can used to load libs
+from a concrete path. Moreover, this function serve to get the directories from
+this parent because these ones are the keys of the returned array</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Function to load files from a parent directory, it can used to load libs from
-a concrete path</p>
+<p>Function to get file names from a parent directory, it can used to load libs
+from a concrete path. Moreover, this function serve to get the directories from
+this parent because these ones are the keys of the returned array</p>
 
 
 
@@ -152,20 +160,32 @@ a concrete path</p>
 dirname(__FILLE__) or something similar</dd>
 					<dt><var>$extension</var></dt>
 					<dd><code>string</code><br>$extension the extension of the files to read in this folder and its subfolders</dd>
+					<dt><var>$files</var></dt>
+					<dd><code>array</code><br>$files it's the variables where are stored all the file names, this variable is
+local because it is a function but it is an object method it would be a
+reference to keep modified from external calls</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>array</code><br>all the files in folders or subfolders from this parent directory<br />
+					<code>array</code><br>all the files in folders or subfolders from this parent directory in the form
+of: array([absolutePath]=&gt;[filename with extension]);<br />
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-RuntimeException.html">RuntimeException</a></code></code><br>if the absolutePath isn't a directory to read its contents (files and or
+directories inside)<br />
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if any argument is not of type expected ( string for $absolutePath, string for
+$extension or array for $files )<br />
+				</div>
 
 
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="executionTime" id="_executionTime">
+	<tr data-order="execution_time" id="_execution_time">
 
 		<td class="attributes"><code>
 			 public static
@@ -175,8 +195,8 @@ dirname(__FILLE__) or something similar</dd>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_executionTime">#</a>
-		<code><a href="source-class-HelperClass.html#62-105" title="Go to source code">executionTime</a>( <span>string <var>$function</var></span>, <span>mixed <var>$context</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$outputFormat</var> = <span class="php-quote">'s'</span></span> )</code>
+		<a class="anchor" href="#_execution_time">#</a>
+		<code><a href="source-class-mapaxe.libs.Helper.html#59-104" title="Go to source code">execution_time</a>( <span>string <var>$function</var></span>, <span>mixed <var>$context</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$outputFormat</var> = <span class="php-quote">'s'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -211,6 +231,11 @@ execution time as minutes</dd>
 					<code>array</code><br>all the files in folders or subfolders from this parent directory<br />
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-BadFunctionCallException.html">BadFunctionCallException</a></code></code><br>it couldn't be called the callable arguments function and context<br />
+					<code><code><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></code></code><br>if any argument is not of type expected<br />
+				</div>
 
 
 
